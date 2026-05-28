@@ -160,10 +160,10 @@ const medusaConfig = {
                                           
     ] 
       : []),
-          {
-    resolve: "@reorderjs/reorder",
-    options: {},
-  },
+    {
+      resolve: "@reorderjs/reorder",
+      options: {},
+    },
   ]
 };
 
