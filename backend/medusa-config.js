@@ -135,10 +135,6 @@ const medusaConfig = {
     }] : [])
   ],
   plugins: [
-    {
-    resolve: "@reorderjs/reorder",
-    options: {},
-  },
   ...(MEILISEARCH_HOST && MEILISEARCH_ADMIN_KEY ? [{
       resolve: '@rokmohar/medusa-plugin-meilisearch',
       options: {
@@ -146,6 +142,10 @@ const medusaConfig = {
           host: MEILISEARCH_HOST,
           apiKey: MEILISEARCH_ADMIN_KEY
         },
+            {
+    resolve: "@reorderjs/reorder",
+    options: {},
+  },
         settings: {
           products: {
             type: 'products',
@@ -156,10 +156,6 @@ const medusaConfig = {
               displayedAttributes: ['id', 'handle', 'title', 'description', 'variant_sku', 'thumbnail'],
               filterableAttributes: ['id', 'handle'],
             },
-              {
-    resolve: "@reorderjs/reorder",
-    options: {},
-  },
             primaryKey: 'id',
           }
         }
