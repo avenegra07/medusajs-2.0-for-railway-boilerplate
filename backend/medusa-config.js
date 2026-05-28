@@ -142,10 +142,6 @@ const medusaConfig = {
           host: MEILISEARCH_HOST,
           apiKey: MEILISEARCH_ADMIN_KEY
         },
-        {
-    resolve: "@reorderjs/reorder",
-    options: {},
-  },
         settings: {
           products: {
             type: 'products',
