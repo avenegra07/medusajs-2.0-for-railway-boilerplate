@@ -163,7 +163,7 @@ const medusaConfig = {
     {
       resolve: "@reorderjs/reorder",
       options: {},
-    },
+    }
   ]
 };
 
