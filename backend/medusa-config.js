@@ -156,6 +156,10 @@ const medusaConfig = {
               displayedAttributes: ['id', 'handle', 'title', 'description', 'variant_sku', 'thumbnail'],
               filterableAttributes: ['id', 'handle'],
             },
+              {
+    resolve: "@reorderjs/reorder",
+    options: {},
+  },
             primaryKey: 'id',
           }
         }
