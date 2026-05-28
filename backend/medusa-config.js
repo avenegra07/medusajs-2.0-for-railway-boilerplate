@@ -159,11 +159,6 @@ const medusaConfig = {
     }] : [])
   ]
 };
-{
-    resolve: "@reorderjs/reorder",
-    options: {},
-  },
-]
 
 console.log(JSON.stringify(medusaConfig, null, 2));
 export default defineConfig(medusaConfig);
