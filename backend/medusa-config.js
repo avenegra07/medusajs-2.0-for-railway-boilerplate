@@ -91,10 +91,12 @@ const medusaConfig = {
         }
       }
     }] : []),
+    ...(BOOKING ? [{
      {
       resolve: "@rsc-labs/medusa-booking-system",
       options: {},
     },
+    }] : []),
     ...(SENDGRID_API_KEY && SENDGRID_FROM_EMAIL || RESEND_API_KEY && RESEND_FROM_EMAIL ? [{
       key: Modules.NOTIFICATION,
       resolve: '@medusajs/notification',
