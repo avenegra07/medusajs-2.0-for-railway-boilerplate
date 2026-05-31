@@ -3,7 +3,7 @@ import type {
   MedusaRequest,
   MedusaResponse,
   MedusaNextFunction,
-} from "@medusajs/medusa";
+} from "@medusajs/framework/http";
 
 async function logger(
   req: MedusaRequest,

@@ -38,16 +38,16 @@ const medusaConfig = {
       storeCors: STORE_CORS,
       jwtSecret: JWT_SECRET,
       cookieSecret: COOKIE_SECRET
-    },
-    build: {
-      rollupOptions: {
-        external: ["@medusajs/dashboard", "@medusajs/admin-shared"]
-      }
     }
   },
   admin: {
     backendUrl: BACKEND_URL,
-    disable: SHOULD_DISABLE_ADMIN,
+    disable: SHOULD_DISABLE_ADMIN === "true",
+  },
+  build: {
+    rollupOptions: {
+      external: ["@medusajs/dashboard", "@medusajs/admin-shared"]
+    }
   },
   modules: [
     {
@@ -112,7 +112,7 @@ const medusaConfig = {
               channels: ['email'],
               api_key: RESEND_API_KEY,
               from: RESEND_FROM_EMAIL,
-            },
+            }
           }] : []),
         ]
       }
@@ -128,14 +128,14 @@ const medusaConfig = {
             options: {
               apiKey: STRIPE_API_KEY,
               webhookSecret: STRIPE_WEBHOOK_SECRET,
-            },
-          },
-        ],
-      },
+            }
+          }
+        ]
+      }
     }] : [])
   ],
   plugins: [
-  ...(MEILISEARCH_HOST && MEILISEARCH_ADMIN_KEY ? [{
+    ...(MEILISEARCH_HOST && MEILISEARCH_ADMIN_KEY ? [{
       resolve: '@rokmohar/medusa-plugin-meilisearch',
       options: {
         config: {
@@ -156,10 +156,11 @@ const medusaConfig = {
           }
         }
       }
-    }
-                                          
-    ] 
-      : []),
+    }] : []),
+    {
+      resolve: "@reorderjs/reorder",
+      options: {},
+    },
     {
       resolve: "@rsc-labs/medusa-booking-system",
       options: {}
