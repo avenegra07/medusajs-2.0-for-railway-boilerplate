@@ -170,6 +170,10 @@ const medusaConfig = {
       resolve: "@reorderjs/reorder",
       options: {},
     }
+    {
+      resolve: "@rsc-labs/medusa-booking-system",
+      options: {}
+    }
   ]
 };
 
