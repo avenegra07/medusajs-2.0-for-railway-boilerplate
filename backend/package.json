@@ -36,8 +36,7 @@
     "medusajs-launch-utils": "0.0.18",
     "minio": "^8.0.6",
     "resend": "4.0.1",
-    "ulid": "^2.4.0",
-    "@rsc-labs/medusa-booking-system": "latest"
+    "ulid": "^2.4.0"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.13.6",
