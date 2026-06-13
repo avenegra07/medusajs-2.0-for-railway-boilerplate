@@ -1,4 +1,5 @@
 packages:
+  - '.'
   - 'backend'
   - 'storefront'
   - 'medusa-gear-rental-starter'
