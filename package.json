@@ -1,0 +1,14 @@
+{
+  "name": "ssermonorepo",
+  "private": true,
+  "scripts": {
+    "build:storefront": "pnpm --filter medusa-gear-rental-starter-draft run build",
+    "start:storefront": "pnpm --filter medusa-gear-rental-starter-draft run start",
+    "build:backend": "pnpm --filter medusa-2.0-boilerplate-backend run build",
+    "start:backend": "pnpm --filter medusa-2.0-boilerplate-backend run start"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.0"
+}
