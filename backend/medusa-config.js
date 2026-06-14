@@ -159,7 +159,20 @@ const medusaConfig = {
     }] : []),
     {
       resolve: "@rsc-labs/medusa-booking-system",
-      options: {}
+      options: {
+                units: [
+          {
+            id: "hour",
+            name: "Hora",
+            value: "hour" // el valor interno que leerá el frontend
+          },
+          {
+            id: "day",
+            name: "Día",
+            value: "day"
+          }
+        ]
+      }
     },
   ]
 };
